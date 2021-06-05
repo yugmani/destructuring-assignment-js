@@ -61,9 +61,12 @@ const obj2 = { a: 'apple', b: 'berry', c: 'cherry', d: 'donut', e: 'egg' };
 
 // 3.  skip some elements in array while destructuring
 var [p, , r] = [10, 20, 30];
-// let [p,,r] = [10, 20, 30]; 
-// const [p,,r] = [10, 20, 30]; 
-console.log(p); // Expected 10
-console.log(r); // Expected 20
+// let [p,,r] = [10, 20, 30];
+// const [p,,r] = [10, 20, 30];
+// console.log(p); // Expected 10
+// console.log(r); // Expected 20
 
-//  4. Rest Operator 
+//  4. Rest Operator
+const [first, , ...last] = ['alpha', 'beta', 'gamma', 'delta'];
+// console.log(first); // Expected "alpha";
+// console.log(last); // Expected ["gamma", "delta"]
