@@ -70,3 +70,14 @@ var [p, , r] = [10, 20, 30];
 const [first, , ...last] = ['alpha', 'beta', 'gamma', 'delta'];
 // console.log(first); // Expected "alpha";
 // console.log(last); // Expected ["gamma", "delta"]
+
+// 5. Swap values using destructuring Assignment
+
+var [firstName, lastName] = ['Yoog', 'Grg'];
+// Before swapping
+// console.log('First Name: ' + firstName); // Expected=>First Name: Yoogg
+// console.log('Last Name: ' + lastName); //Expected=> Last Name: Grg
+//After swapping
+[firstName, lastName] = [lastName, firstName];
+// console.log('First Name: ' + firstName); //Expected=> First Name: Grg
+// console.log('Last Name: ' + lastName); //Expected //Expected=> Last Name: Yoog
