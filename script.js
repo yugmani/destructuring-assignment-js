@@ -105,3 +105,20 @@ const [firstNum, secondNum, ...lastNum] = doubleSeries(arrayNum);
 // console.log(firstNum); // Expected 2
 // console.log(secondNum); // Expected 6
 // console.log(lastNum); // Expected [10, 14]
+
+// 7.1 ES5 to assign variables from objects
+
+const scores = { e: 87, s: 97, c: 99, m: 100 };
+const e = scores.e;
+const s = scores.s;
+const c = scores.c;
+const m = scores.m;
+
+// console.log(e, s, c, m); //Expected 87 97 99 100;
+
+// 7.2 ES6 method of destructuring Assignment
+const marks = { en: 87, sc: 97, cp: 99, mt: 100 };
+
+const { en, sc, cp, mt } = marks;
+
+// console.log(en, sc, cp, mt); // Expected 87 97 99 100;
