@@ -81,3 +81,27 @@ var [firstName, lastName] = ['Yoog', 'Grg'];
 [firstName, lastName] = [lastName, firstName];
 // console.log('First Name: ' + firstName); //Expected=> First Name: Grg
 // console.log('Last Name: ' + lastName); //Expected //Expected=> Last Name: Yoog
+
+// 6. Extract from an array returned from a function
+
+//Example 6.1
+function nameList() {
+  return ['Rita', 'Thapa'];
+}
+
+const [f, l] = nameList();
+// console.log('f: ' + f); // Expected f: Rita
+// console.log('l: ' + l); // Expected l: Thapa
+
+//Example 6.2
+function doubleSeries(arr) {
+  return arr.map(item => item * 2);
+}
+
+const arrayNum = [1, 3, 5, 7];
+
+const [firstNum, secondNum, ...lastNum] = doubleSeries(arrayNum);
+
+// console.log(firstNum); // Expected 2
+// console.log(secondNum); // Expected 6
+// console.log(lastNum); // Expected [10, 14]
