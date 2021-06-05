@@ -122,3 +122,24 @@ const marks = { en: 87, sc: 97, cp: 99, mt: 100 };
 const { en, sc, cp, mt } = marks;
 
 // console.log(en, sc, cp, mt); // Expected 87 97 99 100;
+
+// 8. Destructuring Nested objects
+
+const grades = {
+  grade1: { en: 88, mt: 97 },
+  grade2: { en: 91, mt: 93 }
+};
+
+const {
+  grade1: { en: english1, mt: math1 }
+} = grades;
+
+// console.log('Grade1 english: ' + english1); // Expected 88
+// console.log('Grade 1 math: ' + math1); // Expected 97
+
+const {
+  grade2: { en: english2, mt: math2 }
+} = grades;
+
+// console.log('Grade2 english: ' + english2); // Expected 91
+// console.log('Grade2 math: ' + math2); // Expected 93
