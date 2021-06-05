@@ -54,7 +54,16 @@ const obj2 = { a: 'apple', b: 'berry', c: 'cherry', d: 'donut', e: 'egg' };
 // console.log(a);
 // console.log(b);
 // console.log(rest);
-//Expected
+// Expected
 // apple
 // berry
 // {c: "cherry", d:"donut", e: "egg"}
+
+// 3.  skip some elements in array while destructuring
+var [p, , r] = [10, 20, 30];
+// let [p,,r] = [10, 20, 30]; 
+// const [p,,r] = [10, 20, 30]; 
+console.log(p); // Expected 10
+console.log(r); // Expected 20
+
+//  4. Rest Operator 
