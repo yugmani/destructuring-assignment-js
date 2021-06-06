@@ -143,3 +143,37 @@ const {
 
 // console.log('Grade2 english: ' + english2); // Expected 91
 // console.log('Grade2 math: ' + math2); // Expected 93
+
+// 9. How to set default values when destructuring an object in JavaScript ?
+
+// 9.1 IN ARRAYS
+
+// In order to give default values in arrays when applying the destructuring concept in arrays, we need to initialize values with some value.
+
+let jj, kl, ll;
+[jj, kk, ll = 100] = [37, 56];
+
+console.log(jj); // Expected 37
+console.log(kk); // Expected 56
+console.log(ll); // Expected 100
+
+// 9.2 If any value is present for the respective variable then it will take that value or else then it will take the default variable.
+
+const [aa, bb, cc = 333] = [11, 22, 33];
+
+console.log(aa); // Expected 11
+console.log(bb); // Expected 22
+console.log(cc); // Expected 33;
+
+// 9.3 IN objects
+
+// The values of corresponding properties get stored in the variables.
+
+const user = {
+  name: 'Mirage'
+};
+
+const { name, age = 17 } = user;
+
+console.log(name); // Expected Mirage
+console.log(age); // Expected 17
